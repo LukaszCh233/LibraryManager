@@ -35,10 +35,10 @@ public class User {
 
     @Override
     public String toString() {
-        return  "Id: " + idUser + " | " +
+        return "Id: " + idUser + " | " +
                 "Name: " + userName + " | " +
-                "LastName: " + userLastName + " | "  +
-                "Email: " + userEmail + " | "  +
+                "LastName: " + userLastName + " | " +
+                "Email: " + userEmail + " | " +
                 "Number: " + userNumber;
     }
 }

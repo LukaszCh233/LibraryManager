@@ -1,62 +1,55 @@
-import java.security.PublicKey;
-
 public class Book {
 
-     String bookTitle;
-     String bookAuthor;
-     String bookType;
-     int bookPublicationDate;
-     int idBook;
-     BookStatus status;
+    String bookTitle;
+    String bookAuthor;
+    String bookType;
+    int bookPublicationDate;
+    int idBook;
+    BookStatus status;
 
 
+    public Book(int idBook, String bookTitle, String bookAuthor, String bookType, int bookPublicationDate, BookStatus status) {
+        this.idBook = idBook;
+        this.bookTitle = bookTitle;
+        this.bookAuthor = bookAuthor;
+        this.bookType = bookType;
+        this.bookPublicationDate = bookPublicationDate;
+        this.status = status;
+    }
 
+    public String getBookType() {
+        return bookType;
+    }
 
-     public Book(int idBook, String bookTitle, String bookAuthor, String bookType, int bookPublicationDate) {
-          this.idBook = idBook;
-          this.bookTitle = bookTitle;
-          this.bookAuthor = bookAuthor;
-          this.bookType = bookType;
-          this.bookPublicationDate = bookPublicationDate;
-     }
+    public String getBookTitle() {
+        return bookTitle;
+    }
 
-     public Book() {
+    public String getBookAuthor() {
+        return bookAuthor;
+    }
 
-     }
+    public int getBookPublicationDate() {
+        return bookPublicationDate;
+    }
 
-     public String getBookType() {
-          return bookType;
-     }
+    public int getIdBook() {
+        return idBook;
+    }
 
-     public String getBookTitle() {
-          return bookTitle;
-     }
+    public BookStatus getStatus() {
+        return status;
+    }
 
-     public String getBookAuthor() {
-          return bookAuthor;
-     }
+    @Override
+    public String toString() {
+        return
+                "id: " + idBook + " | " +
+                        "Book: " + bookTitle + " | " +
+                        "Author: " + bookAuthor + " | " +
+                        "Type: " + bookType + " | " +
+                        "PublicationDate: " + bookPublicationDate + " | " +
+                        "Status: " + status;
 
-     public int getBookPublicationDate() {
-          return bookPublicationDate;
-     }
-
-     public int getIdBook() {
-          return idBook;
-     }
-
-     public BookStatus getStatus() {
-          return status;
-     }
-
-     @Override
-     public String toString() {
-          return
-                  "id: " + idBook +  " | " +
-                  "Book: " + bookTitle + " | " +
-                  "Author: " + bookAuthor +  " | " +
-                  "Type: " + bookType +  " | " +
-                  "PublicationDate: " + bookPublicationDate + " | " +
-                  "Status: " + status;
-
-     }
+    }
 }
