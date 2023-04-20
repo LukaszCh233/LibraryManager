@@ -1,15 +1,28 @@
+import books.BooksFunction;
+import database.Database;
+import library.BorrowBookFunction;
+import users.UserFunction;
+
+import java.sql.SQLException;
 import java.util.Scanner;
 
-public class MenuLibrary {
-    BooksLibraryFunction booksLibraryFunction = new BooksLibraryFunction();
-    ReaderFunction readerFunction = new ReaderFunction();
+public class MenuLibrary implements AutoCloseable {
+    BooksFunction booksFunction;
+    UserFunction userFunction;
+    BorrowBookFunction borrowBookFunction;
+    Database database;
+
+    public MenuLibrary() throws SQLException {
+        database = new Database();
+        booksFunction = new BooksFunction(database);
+        userFunction = new UserFunction(database);
+        borrowBookFunction = new BorrowBookFunction(database, booksFunction, userFunction);
+    }
 
     public void useMenu() {
         Scanner scanner = new Scanner(System.in);
         String choice;
-        booksLibraryFunction.loadBookDatabase();
-        readerFunction.loadReaderDatabase();
-        booksLibraryFunction.loadBorrowBooksDatabase();
+
         do {
             System.out.println("Library menu:");
             System.out.println("1: Add book to library");
@@ -25,30 +38,31 @@ public class MenuLibrary {
             choice = scanner.nextLine();
             switch (choice) {
                 case "1":
-                    booksLibraryFunction.addBookToLibrary();
+                    booksFunction.addBookToLibrary();
                     break;
                 case "2":
-                    booksLibraryFunction.bookListView();
+                    booksFunction.bookListView();
                     break;
                 case "3":
-                    booksLibraryFunction.deleteBookFromLibrary();
+                    booksFunction.deleteBookFromLibrary();
                     break;
                 case "4":
-                    booksLibraryFunction.borrowBookFromLibrary();
+                    borrowBookFunction.borrowBookFormLibrary();
                     break;
                 case "5":
+                    borrowBookFunction.returnBookToLibrary();
                     break;
                 case "6":
-                    booksLibraryFunction.borrowedBookListView();
+                    borrowBookFunction.borrowedBookListView();
                     break;
                 case "7":
-                    readerFunction.addReaderToList();
+                    userFunction.addReaderToList();
                     break;
                 case "8":
-                    readerFunction.deleteReaderFormLibrary();
+                    userFunction.deleteReaderFromLibrary();
                     break;
                 case "9":
-                    readerFunction.readersListView();
+                    userFunction.readerListView();
                     break;
                 case "0":
                     break;
@@ -58,5 +72,11 @@ public class MenuLibrary {
 
             }
         } while (!choice.equalsIgnoreCase("0"));
+    }
+
+    @Override
+    public void close() throws Exception {
+        database.close();
+
     }
 }
