@@ -63,7 +63,7 @@ public class BookRepositoryTest {
     }
 
     @Test
-    void saveBookTest() {
+    void shouldSaveBookToDatabaseTest() {
         Book book = new Book(1,
                 "Titus Andronicus",
                 "William Shakespeare",
@@ -81,7 +81,7 @@ public class BookRepositoryTest {
     }
 
     @Test
-    void removeBookTest() {
+    void shouldRemoveChosenBookFromDatabaseTest() {
         // given
         Book book = new Book(1,
                 "Titus Andronicus",
@@ -99,7 +99,7 @@ public class BookRepositoryTest {
     }
 
     @Test
-    void loadBookTest() {
+    void shouldLoadBooksFromDatabase() {
         //Given
         Book book = new Book(1, "a", "a1", "a3", 2000, BookStatus.AVAILABLE);
         Book book1 = new Book(2, "b", "b1", "b3", 2000, BookStatus.AVAILABLE);
@@ -116,7 +116,7 @@ public class BookRepositoryTest {
     }
 
     @Test
-    void findBookTest() {
+    void shouldFindChosenBookWhenThereAreMoreThanOne() {
         //Given
         Book book = new Book(1, "a", "a1", "a3", 2000, BookStatus.AVAILABLE);
         Book book1 = new Book(2, "b", "b1", "b3", 2000, BookStatus.AVAILABLE);
@@ -132,7 +132,7 @@ public class BookRepositoryTest {
     }
 
     @Test
-    void updateBookStatusTest() {
+    void shouldUpdateBookStatusTest() {
         //Given
         Book book = new Book(1, "a", "a1", "a3", 2000, BookStatus.AVAILABLE);
 

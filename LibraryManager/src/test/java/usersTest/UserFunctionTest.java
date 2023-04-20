@@ -38,7 +38,7 @@ public class UserFunctionTest {
     }
 
     @Test
-    void addReaderTest() {
+    void shouldAddReaderToLibraryTest() {
         //Given
         String input = "Tom\nNowak\nemailTest\n123456\nyes\n";
 
@@ -59,7 +59,7 @@ public class UserFunctionTest {
     }
 
     @Test
-    void deleteReaderTest() {
+    void shouldDeleteReaderFromLibraryTest() {
         //Given
         User user = new User(1, "Tom", "Nowak", "emailTest", 123456);
 
@@ -76,7 +76,7 @@ public class UserFunctionTest {
     }
 
     @Test
-    void readersListViewTest() {
+    void shouldDisplayReadersFromLibrary() {
         //Given
         User user = new User(1, "Tom", "Nowak", "emailTest", 123456);
 

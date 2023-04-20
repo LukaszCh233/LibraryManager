@@ -45,7 +45,7 @@ public class BorrowBookRepositoryTest {
     }
 
     @Test
-    void writeBorrowBookTest() {
+    void shouldWriteBorrowBookToDatabaseTest() {
         //Given
         User user = new User(1, "Jan", "Nowak", "qwer", 123456);
         Book book = new Book(1, "Titus Andronicus", "William Shakespeare", null, 0, BookStatus.AVAILABLE);
@@ -73,7 +73,7 @@ public class BorrowBookRepositoryTest {
     }
 
     @Test
-    void loadBorrowedBooksTest() {
+    void shouldLoadBorrowedBooksFromDatabaseTest() {
         //Given
         User user = new User(1, "Jan", "Nowak", "qwer", 123456);
         Book book = new Book(1, "Titus Andronicus", "William Shakespeare", null, 0, BookStatus.AVAILABLE);
@@ -98,7 +98,7 @@ public class BorrowBookRepositoryTest {
     }
 
     @Test
-    void returnBookTest() {
+    void shouldReturnChosenBookToLibraryTest() {
         //Given
         Book book = new Book(1, "Titus Andronicus", "William Shakespeare", null, 0, BookStatus.AVAILABLE);
         User user = new User(1, "Jan", "Nowak", "qwer", 123456);

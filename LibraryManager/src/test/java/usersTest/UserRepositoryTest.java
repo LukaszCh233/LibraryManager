@@ -36,7 +36,7 @@ public class UserRepositoryTest {
     }
 
     @Test
-    void createUserTest() {
+    void shouldCreateUserInDatabaseTest() {
         //Given
         User user = new User(1, "Jan", "Nowak", "qwer", 123456);
 
@@ -56,7 +56,7 @@ public class UserRepositoryTest {
     }
 
     @Test
-    void loadUserTest() {
+    void shouldLoadUsersFormDatabaseTest() {
         //Given
         User user = new User(1, "Jan", "Nowak", "qwer", 123456);
         User user1 = new User(2, "Ewa", "Kowalska", "rewq", 654321);
@@ -73,7 +73,7 @@ public class UserRepositoryTest {
     }
 
     @Test
-    void removeUserTest() {
+    void shouldRemoveChosenUserTest() {
         //Given
         User user = new User(1, "Jan", "Nowak", "qwer", 123456);
 
@@ -87,7 +87,7 @@ public class UserRepositoryTest {
     }
 
     @Test
-    void findUserTest() {
+    void shouldFindChosenUserWhenThereAreMoreThanOneTest() {
         //Given
         User user = new User(1, "Jan", "Nowak", "qwer", 123456);
         User user1 = new User(2, "Ewa", "Kowalska", "rewq", 654321);

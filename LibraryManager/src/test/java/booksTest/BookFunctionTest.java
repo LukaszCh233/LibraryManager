@@ -39,7 +39,7 @@ public class BookFunctionTest {
     }
 
     @Test
-    void addBookTest() {
+    void shouldAddBookTest() {
         //Given
         String input = "TestTitle\nTestAuthor\nTestType\n2000\nyes\n";
         ByteArrayInputStream inputStream = new ByteArrayInputStream(input.getBytes());
@@ -59,7 +59,7 @@ public class BookFunctionTest {
     }
 
     @Test
-    void deleteBookTest() {
+    void shouldDeleteChosenBookTest() {
         //Given
         Book book = new Book(1, "TestTitle", "TestAuthor", "TestType", 2000, BookStatus.AVAILABLE);
 
@@ -77,7 +77,7 @@ public class BookFunctionTest {
     }
 
     @Test
-    void bookListViewTest() {
+    void shouldDisplayBooksFromDatabaseTest() {
         //Given
         Book book = new Book(1, "TestTitle", "TestAuthor", "TestType", 2000, BookStatus.AVAILABLE);
 

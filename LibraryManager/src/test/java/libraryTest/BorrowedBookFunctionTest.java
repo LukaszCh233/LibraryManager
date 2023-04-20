@@ -53,7 +53,7 @@ public class BorrowedBookFunctionTest {
     }
 
     @Test
-    void BorrowBookTest() {
+    void shouldBorrowBookFromLibraryTest() {
         //Given
         User user = new User(1, "Jan", "Nowak", "qwer", 123456);
         Book book = new Book(1, "Titus Andronicus", "William Shakespeare", null, 0, BookStatus.AVAILABLE);
@@ -72,7 +72,7 @@ public class BorrowedBookFunctionTest {
     }
 
     @Test
-    void returnBookTest() {
+    void shouldReturnChosenBookTest() {
         //Given
         Book book = new Book(1, "Titus Andronicus", "William Shakespeare", null, 0, BookStatus.AVAILABLE);
         User user = new User(1, "Jan", "Nowak", "qwer", 123456);
@@ -97,7 +97,7 @@ public class BorrowedBookFunctionTest {
     }
 
     @Test
-    void borrowedBookListViewTest() {
+    void shouldDisplayBorrowedBooksTest() {
         //Given
         Book book = new Book(1, "Titus Andronicus", "William Shakespeare", null, 0, BookStatus.AVAILABLE);
         User user = new User(1, "Jan", "Nowak", "qwer", 123456);
