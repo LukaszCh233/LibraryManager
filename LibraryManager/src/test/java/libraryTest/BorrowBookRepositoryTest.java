@@ -12,7 +12,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import users.User;
 import users.UserRepository;
-
 import java.io.File;
 import java.sql.Date;
 import java.sql.SQLException;
@@ -71,7 +70,6 @@ public class BorrowBookRepositoryTest {
         Assertions.assertEquals(user.getIdUser(), foundBorrowBook.getIdUser());
         Assertions.assertEquals(borrowDate, foundBorrowBook.getBorrowBookDate());
         Assertions.assertEquals(returnDate, foundBorrowBook.getReturnBookDate());
-
     }
 
     @Test
@@ -118,6 +116,5 @@ public class BorrowBookRepositoryTest {
         Collection<BorrowedInfo> borrowedBooks = borrowBookRepository.loadBorrowBooksDatabase();
         Assertions.assertFalse(borrowedBooks.contains(borrowedInfo));
         Assertions.assertEquals(book.getStatus(), BookStatus.AVAILABLE);
-
     }
 }

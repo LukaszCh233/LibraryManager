@@ -8,7 +8,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.io.File;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -79,7 +78,6 @@ public class BookRepositoryTest {
 
         Optional<Book> result = bookRepository.findBook(book.getIdBook());
         Assertions.assertTrue(result.isPresent());
-
     }
 
     @Test
@@ -98,8 +96,6 @@ public class BookRepositoryTest {
         //Then
         Optional<Book> removeBook = bookRepository.findBook(book.getIdBook());
         Assertions.assertFalse(removeBook.isPresent());
-
-
     }
 
     @Test
@@ -148,7 +144,6 @@ public class BookRepositoryTest {
         Optional<Book> foundBook = bookRepository.findBook(book.getIdBook());
         Assertions.assertTrue(foundBook.isPresent());
         Assertions.assertEquals(BookStatus.BORROWED, foundBook.get().getStatus());
-
     }
 }
 

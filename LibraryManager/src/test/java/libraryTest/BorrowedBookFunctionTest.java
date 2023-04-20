@@ -15,7 +15,6 @@ import org.junit.jupiter.api.Test;
 import users.User;
 import users.UserFunction;
 import users.UserRepository;
-
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.sql.Date;
@@ -95,7 +94,6 @@ public class BorrowedBookFunctionTest {
         Assertions.assertFalse(borrowedBooks.contains(borrowedInfo));
         Assertions.assertTrue(borrowedBooks.isEmpty());
         Assertions.assertEquals(book.getStatus(), BookStatus.AVAILABLE);
-
     }
 
     @Test
@@ -117,8 +115,5 @@ public class BorrowedBookFunctionTest {
         Collection<BorrowedInfo> borrowedBooks = borrowBookRepository.loadBorrowBooksDatabase();
         Assertions.assertEquals(1, borrowedBooks.size());
         Assertions.assertTrue(borrowedBooks.contains(borrowedInfo));
-
-
     }
-
 }

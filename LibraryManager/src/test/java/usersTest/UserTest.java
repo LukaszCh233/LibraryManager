@@ -13,6 +13,5 @@ public class UserTest {
         Assertions.assertEquals("Jan", user.getUserName());
         Assertions.assertEquals("Nowak", user.getUserLastName());
         Assertions.assertEquals(12345, user.getUserNumber());
-
     }
 }

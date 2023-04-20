@@ -84,7 +84,6 @@ public class UserRepositoryTest {
         //Then
         Optional<User> removeUser = userRepository.findUser(user.getIdUser());
         Assertions.assertFalse(removeUser.isPresent());
-
     }
 
     @Test
@@ -106,6 +105,5 @@ public class UserRepositoryTest {
         Assertions.assertEquals(user1, foundUser1.get());
         Assertions.assertEquals("Jan", user.getUserName());
         Assertions.assertEquals("Ewa", user1.getUserName());
-
     }
 }

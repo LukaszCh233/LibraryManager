@@ -25,7 +25,6 @@ public class UserFunctionTest {
         database = new Database(DATABASE_NAME);
         userRepository = new UserRepository(database);
         userFunction = new UserFunction(database);
-
     }
 
     @AfterEach
@@ -89,6 +88,5 @@ public class UserFunctionTest {
         Collection<User> users = userRepository.loadUser();
         Assertions.assertTrue(users.contains(user));
         Assertions.assertEquals(1, users.size());
-
     }
 }

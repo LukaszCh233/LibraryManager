@@ -9,15 +9,12 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.sql.SQLException;
 import java.util.Collection;
 
-
 public class BookFunctionTest {
-
 
     private static final String DATABASE_NAME = "test.db";
     Database database;
@@ -29,7 +26,6 @@ public class BookFunctionTest {
         database = new Database(DATABASE_NAME);
         bookRepository = new BookRepository(database);
         booksFunction = new BooksFunction(database);
-
     }
 
     @AfterEach
@@ -41,7 +37,6 @@ public class BookFunctionTest {
             throw new RuntimeException("Failed to delete database file: " + DATABASE_NAME);
         }
     }
-
 
     @Test
     void addBookTest() {
@@ -79,7 +74,6 @@ public class BookFunctionTest {
         //Then
         Collection<Book> books = bookRepository.loadBook();
         Assertions.assertTrue(books.isEmpty());
-
     }
 
     @Test

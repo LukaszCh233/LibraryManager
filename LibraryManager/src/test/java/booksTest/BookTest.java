@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 
 public class BookTest {
 
-
     @Test
     void name() {
         Book book = new Book(null, null, null, "Fantasy", 13, BookStatus.AVAILABLE);
@@ -15,7 +14,5 @@ public class BookTest {
         Assertions.assertEquals(13, book.getBookPublicationDate());
         Assertions.assertEquals(book.getStatus(), BookStatus.AVAILABLE);
         Assertions.assertEquals("Fantasy",book.getBookType());
-
-
     }
 }
