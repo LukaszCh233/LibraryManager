@@ -29,7 +29,6 @@ public class BookRepository {
         } else {
             status = BookStatus.AVAILABLE;
         }
-
         return new Book(idBook, bookName, bookAuthor, bookType, publicationDate, status);
     }
 
@@ -96,7 +95,6 @@ public class BookRepository {
         }
         return false;
     }
-
 }
 
 

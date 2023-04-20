@@ -1,9 +1,6 @@
 package users;
 
-
 import database.Database;
-
-
 import java.util.Collection;
 import java.util.InputMismatchException;
 import java.util.Scanner;

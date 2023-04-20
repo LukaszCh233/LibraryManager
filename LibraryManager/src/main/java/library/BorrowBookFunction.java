@@ -5,7 +5,6 @@ import books.BookRepository;
 import books.BooksFunction;
 import database.Database;
 import users.UserFunction;
-
 import java.sql.Date;
 import java.util.Collection;
 import java.util.InputMismatchException;
@@ -17,7 +16,6 @@ public class BorrowBookFunction {
     UserFunction userFunction;
     BookRepository bookRepository;
 
-
     public BorrowBookFunction(Database database, BooksFunction booksFunction, UserFunction userFunction) {
         this.borrowBookRepository = new BorrowBookRepository(database);
         this.booksFunction = booksFunction;
@@ -26,7 +24,6 @@ public class BorrowBookFunction {
     }
 
     public void borrowBookFormLibrary() {
-
 
         Scanner scanner = new Scanner(System.in);
         String choice;
@@ -48,7 +45,6 @@ public class BorrowBookFunction {
                     Date returnData = Date.valueOf(scanner.nextLine());
                     borrowBookRepository.writeBorrowBookToDatabase(idBook, idUser, borrowData, returnData);
 
-
                 } catch (InputMismatchException e) {
                     System.out.println("Bad type");
                 } catch (IllegalArgumentException e) {
@@ -59,7 +55,6 @@ public class BorrowBookFunction {
             }
         }
         while (!choice.equalsIgnoreCase("no"));
-
     }
 
     public void borrowedBookListView() {

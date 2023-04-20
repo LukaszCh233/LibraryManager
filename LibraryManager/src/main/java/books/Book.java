@@ -78,7 +78,6 @@ public class Book {
                         "Type: " + bookType + " | " +
                         "PublicationDate: " + bookPublicationDate + " | " +
                         "Status: " + status;
-
     }
 
     @Override

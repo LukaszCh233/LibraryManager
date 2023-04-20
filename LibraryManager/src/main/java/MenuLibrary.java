@@ -2,7 +2,6 @@ import books.BooksFunction;
 import database.Database;
 import library.BorrowBookFunction;
 import users.UserFunction;
-
 import java.sql.SQLException;
 import java.util.Scanner;
 
@@ -77,6 +76,5 @@ public class MenuLibrary implements AutoCloseable {
     @Override
     public void close() throws Exception {
         database.close();
-
     }
 }
