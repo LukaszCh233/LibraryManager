@@ -1,7 +1,9 @@
 package users;
 
-import java.util.Objects;
+import lombok.Getter;
 
+import java.util.Objects;
+    @Getter
 public class User {
     Integer idUser;
     String userName;
@@ -15,26 +17,6 @@ public class User {
         this.userLastName = userLastName;
         this.userEmail = userEmail;
         this.userNumber = userNumber;
-    }
-
-    public Integer getIdUser() {
-        return idUser;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public String getUserLastName() {
-        return userLastName;
-    }
-
-    public String getUserEmail() {
-        return userEmail;
-    }
-
-    public int getUserNumber() {
-        return userNumber;
     }
 
     @Override

@@ -1,7 +1,10 @@
 package books;
 
+import lombok.Getter;
+
 import java.util.Objects;
 
+@Getter
 public class Book {
 
     String bookTitle;
@@ -12,30 +15,6 @@ public class Book {
     BookStatus status;
 
 
-    public void setBookTitle(String bookTitle) {
-        this.bookTitle = bookTitle;
-    }
-
-    public void setBookAuthor(String bookAuthor) {
-        this.bookAuthor = bookAuthor;
-    }
-
-    public void setBookType(String bookType) {
-        this.bookType = bookType;
-    }
-
-    public void setBookPublicationDate(int bookPublicationDate) {
-        this.bookPublicationDate = bookPublicationDate;
-    }
-
-    public void setIdBook(Integer idBook) {
-        this.idBook = idBook;
-    }
-
-    public void setStatus(BookStatus status) {
-        this.status = status;
-    }
-
     public Book(Integer idBook, String bookTitle, String bookAuthor, String bookType, int bookPublicationDate, BookStatus status) {
         this.idBook = idBook;
         this.bookTitle = bookTitle;
@@ -43,30 +22,6 @@ public class Book {
         this.bookType = bookType;
         this.bookPublicationDate = bookPublicationDate;
         this.status = status;
-    }
-
-    public String getBookType() {
-        return bookType;
-    }
-
-    public String getBookTitle() {
-        return bookTitle;
-    }
-
-    public String getBookAuthor() {
-        return bookAuthor;
-    }
-
-    public int getBookPublicationDate() {
-        return bookPublicationDate;
-    }
-
-    public Integer getIdBook() {
-        return idBook;
-    }
-
-    public BookStatus getStatus() {
-        return status;
     }
 
     @Override

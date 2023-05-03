@@ -3,6 +3,7 @@ package booksTest;
 import books.Book;
 import books.BookRepository;
 import books.BookStatus;
+
 import database.Database;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -15,7 +16,6 @@ import java.util.Collection;
 import java.util.Optional;
 
 public class BookRepositoryTest {
-
     private static final String DATABASE_NAME = "test.db";
     Database database;
     BookRepository bookRepository;
@@ -36,7 +36,6 @@ public class BookRepositoryTest {
         }
     }
 
-    // exampleTest
     @Test
     void shouldCreateBookGivenSampleBook() {
         // given
@@ -61,7 +60,6 @@ public class BookRepositoryTest {
         Assertions.assertEquals("William Shakespeare", foundBook.getBookAuthor());
         Assertions.assertEquals(BookStatus.AVAILABLE, foundBook.getStatus());
     }
-
     @Test
     void shouldSaveBookToDatabaseTest() {
         Book book = new Book(1,

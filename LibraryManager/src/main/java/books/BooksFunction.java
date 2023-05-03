@@ -52,6 +52,7 @@ public class BooksFunction {
                 try {
                     System.out.println("Enter book id to delete:");
                     int idBook = scanner.nextInt();
+                    scanner.nextLine();
                     bookRepository.removeBookFromDatabase(idBook);
 
                 } catch (IllegalArgumentException e) {

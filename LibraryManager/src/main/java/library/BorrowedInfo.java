@@ -1,8 +1,11 @@
 package library;
 
+import lombok.Getter;
+
 import java.sql.Date;
 import java.util.Objects;
 
+@Getter
 public class BorrowedInfo {
     int idBorrowBook;
     int idBook;
@@ -24,42 +27,6 @@ public class BorrowedInfo {
         this.userLastName = userLastName;
         this.borrowBookDate = borrowBookDate;
         this.returnBookDate = returnBookDate;
-    }
-
-    public int getIdBook() {
-        return idBook;
-    }
-
-    public String getBookTitle() {
-        return bookTitle;
-    }
-
-    public String getBookAuthor() {
-        return bookAuthor;
-    }
-
-    public int getIdUser() {
-        return idUser;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public String getUserLastName() {
-        return userLastName;
-    }
-
-    public Date getBorrowBookDate() {
-        return borrowBookDate;
-    }
-
-    public Date getReturnBookDate() {
-        return returnBookDate;
-    }
-
-    public int getIdBorrowBook() {
-        return idBorrowBook;
     }
 
     @Override
